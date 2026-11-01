@@ -2,10 +2,10 @@
 evaluation.py -- performance, calibration, selective prediction and the two main-text tables
 
 Paper:    Table 3 (AUROC, paired loss, AUPRC lift, calibration slope; single models and deep ensembles),
-          Table 4 (nine uncertainty signals x three levels x three families), Results RQ2b
+          Table 4 (nine uncertainty measures x three levels x three families), Results RQ2b
 Origin:   performance/metrics.py, calibration.py, auprc.py, ensemble_performance.py, levels/selective_prediction.py,
           levels/level3_ensembles_mc.py, tables_figures/table3.py of the full package, merged; the Table-4 section
-          is the cell computation of tables_figures/figure4_levels.py without the drawing, with the signal names
+          is the cell computation of tables_figures/figure4_levels.py without the drawing, with the measure names
           and the rounding rule of tables_figures/supplementary_tables.py
 Reads:    config.MODELS checkpoints (S6), config.SIGNALS/scores_*.npz and mc_mi_*.npz (patient-level, stay local),
           the aggregate CSVs of config.SIGNALS and config.REPORT
@@ -735,7 +735,7 @@ def _risk_coverage(score, fehler):
 
 
 def s7_ebene3():
-    """Level 3 for every signal stored in the scores files, per family, seed and domain."""
+    """Level 3 for every measure stored in the scores files, per family, seed and domain."""
     z3, kurven = [], {}
     prim = C.SCHWELLEN[0][1]
     for familie, (arch, variante, _) in C.FAMILIEN.items():
@@ -817,16 +817,16 @@ def main_selective(argv=None):
 #
 # What it computes (descriptive, declared post hoc after the level-1/2 results were known):
 #   (a) ENSEMBLE, every reported family with ten complete seeds, both domains: predictor p_bar = mean of the ten
-#       member probabilities; error label e = 1[1(p_bar > threshold) != y]; signals U_total = H(p_bar), U_aleatoric,
+#       member probabilities; error label e = 1[1(p_bar > threshold) != y]; measures U_total = H(p_bar), U_aleatoric,
 #       U_epistemic (mutual information); metrics AURC, E-AURC, risk at 80 % coverage. Variability: leave-one-member-
 #       out jackknife (ten ensembles of nine), reported as a range, NOT a confidence interval.
-#   (b) MC-MI, families GRU/LSTM/T1, per seed: signals from mc_mi_*.npz (probability-scale decomposition of the
+#   (b) MC-MI, families GRU/LSTM/T1, per seed: measures from mc_mi_*.npz (probability-scale decomposition of the
 #       Monte Carlo passes of the same model, mc_dropout.py), error label of the deterministic prediction of the
 #       same family and seed (pipeline convention), paired contrasts against the softmax entropy from
 #       ebene3_natural.csv.
 #
 # Metric convention: risk_coverage mirrors _risk_coverage of the pipeline verbatim: stable ascending sort by the
-# signal, accepted from the bottom; risk = error rate of the accepted; AURC = mean of the cumulative error rate over
+# measure, accepted from the bottom; risk = error rate of the accepted; AURC = mean of the cumulative error rate over
 # ALL ranks; E-AURC = AURC minus oracle AURC (errors sorted ascending); risk@80 = cumulative rate at rank
 # floor(0.8 n) - 1.
 # ==========================================================================================
@@ -1004,7 +1004,7 @@ def main_level3(argv=None):
     print(f"\n  written: ebene3_e14.csv ({len(df)} rows)")
 
     print("\n" + "-" * 78)
-    print("TRANSFER: ensemble (H(p_bar) as signal) against single-model entropy")
+    print("TRANSFER: ensemble (H(p_bar) as measure) against single-model entropy")
     print(f"{'Family':<12}{'E-AURC ens.':>13}{'jack range':>20}"
           f"{'E-AURC det':>12}{'R@80 ens.':>11}{'R@80 det':>10}"
           f"{'error ens.':>12}{'det':>7}")
@@ -1155,15 +1155,15 @@ def main_table3(argv=None):
 
 # ==========================================================================================
 # section: Table 4 cells (from tables_figures/figure4_levels.py of the full package, without the
-# drawing; signal names, the half-up rounding rule and the ALEA criterion from
+# drawing; measure names, the half-up rounding rule and the ALEA criterion from
 # tables_figures/supplementary_tables.py v2.0 / 2026-10-06)
 # ------------------------------------------------------------------------------------------
-# Paper:    Table 4 (nine uncertainty signals x three levels x three base families; the cells are the
+# Paper:    Table 4 (nine uncertainty measures x three levels x three base families; the cells are the
 #           means over ten seeds, ensembles one value, rounded once to three decimals)
 # Reads:    config.SIGNALS/ddu_seeds_natural.csv, mc_seeds_natural.csv; config.REPORT/mc_mi_seeds_natural.csv,
 #           mi_ensemble_natural.csv, ebene3_natural.csv, ebene3_e14.csv
 # Writes:   config.APPENDIX/table_3_cells.csv and .md (file names of the original run; this is Table 4)
-# Checks:   A1 ten seeds per signal, family and level (ensembles: one full row plus the jackknife range),
+# Checks:   A1 ten seeds per measure, family and level (ensembles: one full row plus the jackknife range),
 #           all 81 cells present; A3 aleatoric part within ALEA_TOL of the total uncertainty (MC dropout
 #           and deep ensemble); the former axis check A4 belongs to the figure and is not part of the table
 # ==========================================================================================
@@ -1278,7 +1278,7 @@ def seeds10(g, was):
 def main_table4(argv=None):
     """Table 4: the cell values from the aggregate files, written as table_3_cells.csv / .md."""
     print("=" * 78)
-    print("TABLE 4  Signals across the three levels, three families (cells)")
+    print("TABLE 4  Measures across the three levels, three families (cells)")
     print("=" * 78)
     os.makedirs(APP_T4, exist_ok=True)
     dd = lies_csv_t4("ddu_seeds_natural.csv", SIG_T4)

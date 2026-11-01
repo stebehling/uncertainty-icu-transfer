@@ -268,11 +268,11 @@ def binaere_entropie_mc(p, eps=MC_EPS):
 
 
 def mc_signale(M):
-    """The Monte Carlo signals from the (T, N) logits of mc_passes, on the probability
+    """The Monte Carlo measures from the (T, N) logits of mc_passes, on the probability
     scale as for the deep ensembles: p_t = sigmoid(logit_t); p_mean; U_total =
     H(p_mean) (predictive entropy); U_alea = mean_t H(p_t) (aleatoric part);
     MI = U_total - U_alea (mutual information, epistemic part); and the logit variance
-    across the passes (ddof 0; the signal 'mc_epistemisch' of the result files).
+    across the passes (ddof 0; the measure 'mc_epistemisch' of the result files).
     Checks the decomposition identity and the non-negativity of the MI."""
     P = 1.0 / (1.0 + np.exp(-M))
     p_mean = P.mean(0)

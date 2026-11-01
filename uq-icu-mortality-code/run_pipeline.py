@@ -1,5 +1,5 @@
 """
-run_pipeline.py -- the whole study in one command: data, hyperparameters, seeds, caches, signals, evaluation, tables
+run_pipeline.py -- the whole study in one command: data, hyperparameters, seeds, caches, measures, evaluation, tables
 
 Paper:    Tables 1-4 and the RQ1 / RQ2a / RQ2b values of the main text (threshold 0.1288)
 Origin:   run_pipeline.py of the full package (input checks, stages S2-S7), extended by the data stage
@@ -11,14 +11,14 @@ Checks:   --check-inputs = seeding determinism, split SHA / sizes / prevalences,
 Run:      python run_pipeline.py --data          raw tables -> dataset.npz, eICU tensor, stay map, split, Tables 1-2
           python run_pipeline.py --all           check inputs, search (skipped when beste_hp_<family>.json
                                                  exists -- the shipped results/02_suchen files are used
-                                                 automatically), seeds, caches, signals, Monte Carlo
+                                                 automatically), seeds, caches, measures, Monte Carlo
                                                  passes, evaluation, ensembles, performance, level 3,
                                                  Tables 3-4
           python run_pipeline.py --data --all    both, in order
           single stages: --check-inputs, --search FAMILY, --seeds FAMILY, --caches, --signals, --mc,
           --evaluate, --ensembles, --performance, --levels, --tables (they combine and run in pipeline order)
 
-Families (common.FAMILIEN): GRU_det LSTM_det T1_det. Seeds 42-51. The Monte Carlo dropout signals are
+Families (common.FAMILIEN): GRU_det LSTM_det T1_det. Seeds 42-51. The Monte Carlo dropout measures are
 sampled from these trained models (mc_dropout.py; masks drawn with seed config.MC_SEED per cohort); the
 stage runs after --signals and before --evaluate, because level 3 reads the logit variance it adds to the
 scores files. Existing outputs are skipped (resume); checkpoints are never overwritten.

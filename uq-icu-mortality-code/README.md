@@ -1,4 +1,4 @@
-# Code for "Evaluating uncertainty for detecting performance loss and guiding deferral after model transfer between hospital systems" (short version)
+# Code for "Evaluating uncertainty for detecting performance loss and guiding deferral after model transfer between hospital systems"
 
 This is the compact companion code of the article: fourteen Python files that take the raw
 PhysioNet tables of MIMIC-IV v3.1 and eICU-CRD v2.0 through preprocessing, model training,
@@ -6,32 +6,33 @@ Monte Carlo dropout, deep ensembles and the three evaluation levels, and end wit
 tables. It reproduces Tables 1-4 and every RQ1 / RQ2a / RQ2b value of the main text at the
 prevalence threshold 0.1288. It does not draw the figures and does not contain the supplementary
 analyses (constrained encoder variants, sensitivity analyses, supplementary tables and figures);
-the complete package that produces those is archived separately (see the article's Code
-availability statement). The numerical values behind every figure of the article and the
-supplement are included as source data (`figure_source_data/`, see below).
+the complete package that produces those is not part of this repository. The numerical values
+behind every figure of the article and the supplement are included as source data
+(`figure_source_data/`, see below).
 
 `results/` holds the selected hyperparameters and the aggregate outputs of the reported run, so
 that a new run needs no hyperparameter search and can be compared with the article file by file.
 No patient-level data and no trained model is included.
 
 Version 1.1 (2026-10-26). Changes against version 1.0 (2026-10-10): the Monte Carlo dropout
-signals are sampled from the trained models themselves (section "Monte Carlo dropout" below); the
+measures are sampled from the trained models themselves (section "Monte Carlo dropout" below); the
 three separately trained MC-dropout model families with a heteroscedastic output head of version
 1.0 and their hyperparameter files are gone, so three families are trained instead of six; the
 Monte Carlo rows of `results/` changed accordingly, every other result file is unchanged; the
 figure source data were added.
 
-## Unzip, install, run one command
+## Install and run one command
 
-The zip contains the fourteen Python files (nine at the top level, four in `data/`, two in
-`models/`), this README, `results/` and `figure_source_data/`. They belong together in one
-folder; do not move single files out of it.
+The repository folder `uq-icu-mortality-code/` contains the fourteen Python files (nine at the top
+level, four in `data/`, two in `models/`), this README, `requirements.txt`, `results/` and
+`figure_source_data/`. They belong together in one folder; do not move single files out of it.
 
-1. Make an empty project folder, for example `uq-study/`, and unzip the archive into it. You get
-   `uq-study/uq-icu-mortality-code/` with the files above. Everything the code produces (the two
-   tensors, `rerun_natural/` with all outputs) is written next to that folder, into `uq-study/`,
-   unless you set `UQ_ROOT` to another working directory. Run every command below from inside
-   `uq-icu-mortality-code/`.
+1. Clone the repository into a project folder, for example `uq-study/`:
+   `git clone https://github.com/stebehling/uncertainty-icu-transfer uq-study` (or unpack the
+   release archive into an empty `uq-study/`). You get `uq-study/uq-icu-mortality-code/` with the
+   files above. Everything the code produces (the two tensors, `rerun_natural/` with all outputs)
+   is written next to that folder, into `uq-study/`, unless you set `UQ_ROOT` to another working
+   directory. Run every command below from inside `uq-icu-mortality-code/`.
 2. Get credentialed access to [MIMIC-IV v3.1](https://physionet.org/content/mimiciv/3.1/) and
    [eICU-CRD v2.0](https://physionet.org/content/eicu-crd/2.0/) on PhysioNet and download the
    compressed CSV tables (MIMIC-IV: `icu/icustays`, `icu/chartevents`, `hosp/admissions`,
@@ -45,6 +46,10 @@ folder; do not move single files out of it.
    pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
    pip install numpy==2.3.1 pandas==2.3.1 scipy==1.17.1 scikit-learn==1.9.0 optuna==4.9.0
    ```
+
+   The same pins are listed in `requirements.txt`; after the `torch` line above,
+   `pip install -r requirements.txt` installs the remaining packages (the installed CUDA build of
+   `torch` satisfies its pin).
 
    Training, the prediction caches and the Monte Carlo passes use the GPU; everything else runs on
    a CPU.
@@ -73,7 +78,7 @@ folder; do not move single files out of it.
    stay/patient map, the frozen split and Tables 1-2. `--all` checks the inputs, trains the ten
    seeds of the three families with the shipped hyperparameters (`results/02_suchen/beste_hp_*.json`
    are picked up automatically; delete them to repeat the Optuna search, hours per family), writes
-   the prediction caches and the uncertainty signals, runs the Monte Carlo passes, evaluates
+   the prediction caches and the uncertainty measures, runs the Monte Carlo passes, evaluates
    performance and the three levels, runs the deep ensembles, and writes Tables 3 and 4. Every
    product that already exists is kept, so the command can be interrupted and restarted.
 
@@ -85,7 +90,7 @@ folder; do not move single files out of it.
 
 Run time on the authors' machine (Windows 11, NVIDIA RTX 3060): data about 25 min (CPU), training
 about 40 min for the three families (GPU; version 1.0 measured about 1.3 h for its six), prediction
-caches about 10 min (GPU), signals about 5 min (CPU), Monte Carlo passes 27 min (GPU), evaluation,
+caches about 10 min (GPU), measures about 5 min (CPU), Monte Carlo passes 27 min (GPU), evaluation,
 ensembles and tables about 1 min; about 2 h in total without the hyperparameter search.
 
 ## The fourteen files
@@ -101,7 +106,7 @@ ensembles and tables about 1 min; about 2 h in total without the hyperparameter 
 | `data/cohort_tables.py` | cohort cascades and baseline characteristics of both databases | Tables 1-2 (`08_appendix/table_1_*`) |
 | `models/architectures.py` | GRU, LSTM, Transformer; the loss; the Monte Carlo dropout passes of a trained model | — |
 | `models/training.py` | Optuna search (30 trials) and the ten seeds per family | `02_suchen/`, `03_modelle/` |
-| `uncertainty.py` | representation density, prediction caches, level-1 and level-2 signals of density and entropy | `04_vorhersagen/`, `05_signale/` |
+| `uncertainty.py` | representation density, prediction caches, level-1 and level-2 measures of density and entropy | `04_vorhersagen/`, `05_signale/` |
 | `mc_dropout.py` | 30 Monte Carlo passes of every trained model: logit variance, U_total / U_alea / MI, levels 1 and 2 | `mc_seeds_natural.csv`, `mc_mi_seeds_natural.csv` |
 | `ensembles.py` | deep ensembles of the ten seeds, levels 1 and 2 | `mi_ensemble_natural.csv` |
 | `evaluation.py` | AUROC / ECE / temperature, calibration slope, AUPRC, ensemble performance, level 3, Tables 3-4 | `06_report/*.csv`, `08_appendix/table_3*.md` |
@@ -113,15 +118,15 @@ output file names are those of the original study (German); the glossary below t
 
 ## Monte Carlo dropout
 
-The Monte Carlo dropout signals come from the trained deterministic models themselves
+The Monte Carlo dropout measures come from the trained deterministic models themselves
 (`mc_dropout.py`): every dropout layer that was active in training is switched on at prediction
 time (the input, inter-layer and output dropout of the recurrent models; every dropout of the
 Transformer), the model is run 30 times per patient and cohort with masks drawn after
-`torch.manual_seed(42)` per cohort, and the signals are formed on the probability scale exactly
+`torch.manual_seed(42)` per cohort, and the measures are formed on the probability scale exactly
 as for the deep ensembles: predictive entropy U_total of the mean probability, aleatoric part
 U_alea (mean entropy of the passes), mutual information MI = U_total − U_alea, and the variance of
-the 30 logits per patient (`mc_epistemisch`). Level 2 and 3 score these signals against the errors
-of the same model. No model is retrained for this; the stage runs after the signals and before the
+the 30 logits per patient (`mc_epistemisch`). Level 2 and 3 score these measures against the errors
+of the same model. No model is retrained for this; the stage runs after the measures and before the
 evaluation, because level 3 reads the logit variance it adds to the scores files.
 
 ## Where the paper's numbers are
@@ -130,8 +135,8 @@ evaluation, because level 3 reads the logit variance it adds to the scores files
 |---|---|
 | Tables 1-2 | `08_appendix/table_1_cohort_flow.md`, `table_1_demographics.md` |
 | Table 3 | `08_appendix/table_3.md` (from `06_report/leistung_natural.csv`, `auprc_natural.csv`, `kalibrierung_kennzahlen.csv`, `08_appendix/table_2_ensemble_rows.csv`) |
-| Table 4 | `08_appendix/table_3_cells.md` (file name of the original run; nine signals × three levels × three families) |
-| RQ1 cohort separation, RQ2a error detection (every signal, seed and threshold) | `05_signale/ddu_seeds_natural.csv`, `mc_seeds_natural.csv`, `06_report/mc_mi_seeds_natural.csv`, `mi_ensemble_natural.csv` |
+| Table 4 | `08_appendix/table_3_cells.md` (file name of the original run; nine measures × three levels × three families) |
+| RQ1 cohort separation, RQ2a error detection (every measure, seed and threshold) | `05_signale/ddu_seeds_natural.csv`, `mc_seeds_natural.csv`, `06_report/mc_mi_seeds_natural.csv`, `mi_ensemble_natural.csv` |
 | RQ2b selective prediction | `06_report/ebene3_natural.csv`, `ebene3_e14.csv` |
 | Figures 1-4, Supplementary Figures 1-7 and 9 | `figure_source_data/<figure>.csv` (shipped; the plotted values, see below) |
 
@@ -152,7 +157,7 @@ The two hand-drawn schematics (Figure 5, Supplementary Figure 8) have their numb
 `familie` model family · `arch` architecture · `seed` training seed · `domaene` cohort (`in_domain` =
 MIMIC-IV test set, `transfer` = eICU-CRD) · `ebene1_ood` level 1 cohort separation · `ebene2_fehler`
 level 2 error detection · `ebene3` level 3 selective prediction · `schwelle` classification threshold ·
-`wert` value · `signal` uncertainty signal · `softmax_entropie` predictive entropy · `dichte`
+`wert` value · `signal` uncertainty measure (column name) · `softmax_entropie` predictive entropy · `dichte`
 representation density · `mc_epistemisch` logit variance across the Monte Carlo dropout passes ·
 `mi_gesamt` / `mi_aleatorisch` / `mi_epistemisch` total / aleatoric / epistemic (MI) uncertainty
 (Monte Carlo passes in `mc_mi_seeds_natural.csv`, deep ensembles in `mi_ensemble_natural.csv`) ·

@@ -18,7 +18,7 @@ Family registry: name -> (arch for the result tables, variant, build type)
   build type "L"     recurrent model of models/architectures.py (GRU, LSTM)
   build type "T"     TransformerNatural (T1)
   variant            always "det": the three deterministic families are the only models that are
-                     trained; the Monte Carlo dropout signals are sampled from these models
+                     trained; the Monte Carlo dropout measures are sampled from these models
                      (mc_dropout.py). The field is kept because the file names of the original run
                      carry it (p_ihm_<family>_det_seed<n>_<domain>.npz).
 Short version: the constrained families (spectral normalisation, residual block) and the

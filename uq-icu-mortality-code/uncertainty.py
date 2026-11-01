@@ -1,12 +1,12 @@
 """
-uncertainty.py -- representation density, prediction caches and the level-1 / level-2 signals
+uncertainty.py -- representation density, prediction caches and the level-1 / level-2 measures
 
-Paper:    Methods (representation density; uncertainty signals); Results RQ1 and RQ2a; Table 4
+Paper:    Methods (representation density; uncertainty measures); Results RQ1 and RQ2a; Table 4
 Origin:   uncertainty/density.py, uncertainty/caches.py and uncertainty/signals.py of the full package, merged
 Reads:    config.MODELS checkpoints, config.DATASET_MIMIC, config.DATASET_EICU (through common)
 Writes:   config.CACHES/p_ihm_*.npz, features_*.npz (patient-level, stay local);
           config.SIGNALS/scores_*.npz (patient-level), ddu_seeds_natural.csv
-          (the Monte Carlo signals and mc_seeds_natural.csv come from mc_dropout.py)
+          (the Monte Carlo measures and mc_seeds_natural.csv come from mc_dropout.py)
 Run:      python uncertainty.py --caches      (GPU, minutes)
           python uncertainty.py --signals     (CPU, about 25 min for the three base families)
           or through run_pipeline.py --caches / --signals / --all
@@ -263,7 +263,7 @@ def main_caches(argv=None):
 # ==========================================================================================
 # section from the full package: uncertainty/signals.py
 # ------------------------------------------------------------------------------------------
-# signals.py -- uncertainty signals per seed: level 1 (cohort separation) and level 2 (error
+# signals.py -- uncertainty measures per seed: level 1 (cohort separation) and level 2 (error
 #               detection) for density, density variants and entropy
 #
 # Paper:    Results RQ1 / RQ2a; Table 4; Supplementary tables of the density variants
@@ -279,7 +279,7 @@ def main_caches(argv=None):
 # Checks:   an existing CSV must be a bit-identical subset of the new rows (superset watchdog)
 # Run:      python uncertainty.py --signals   (or run_pipeline.py --signals); CPU
 #
-# Signals: dichte (class-conditional Gaussian, fit sets voll_natuerlich = training part of the
+# Measures: dichte (class-conditional Gaussian, fit sets voll_natuerlich = training part of the
 # split and mukhoti_balanciert = class-balanced subset, covariances klassenspezifisch and
 # tied_mahalanobis), rmd (relative density score: class density minus background density),
 # gmm_klasse (per-class Gaussian mixture, 3 components), gda_l2 (density on L2-normalised
@@ -298,7 +298,7 @@ def _l2norm(F):
 
 def fit_varianten(Ffit, y_fit, fkt, nur=None):
     """Background Gaussian for the relative density score, per-class GMMs (3 components),
-    L2-GDA -- all on the given fitting set. Returns dict signal -> score_fn(F) -> ndarray;
+    L2-GDA -- all on the given fitting set. Returns dict measure -> score_fn(F) -> ndarray;
     `nur` restricts the variants that are fitted."""
     from sklearn.mixture import GaussianMixture
     Ffit = np.asarray(Ffit, dtype=np.float64)
@@ -348,7 +348,7 @@ def fit_varianten(Ffit, y_fit, fkt, nur=None):
 
 # ---------------------------------------------------------------- stage S5
 def signale(daten, eicu):
-    """Level-1 and level-2 AUROCs of every signal per deterministic family and seed."""
+    """Level-1 and level-2 AUROCs of every measure per deterministic family and seed."""
     fkt, quelle = signal_funktionen()
     y_fit = daten["ytr"].numpy().astype(int)
     pos = np.flatnonzero(y_fit == 1)
@@ -454,9 +454,9 @@ def signale(daten, eicu):
                         f"p_{C.TASK}_{familie}_det_seed{seed}_{dom}.npz"))
                         )["y"].astype(np.int8)
                 np.savez_compressed(zs, **bl)
-            C.log(f"[S5] {familie}/seed {seed}: signals computed.")
+            C.log(f"[S5] {familie}/seed {seed}: measures computed.")
     if not zeilen_ddu:
-        C.abbruch("S5: no signals computed (features / caches missing?).")
+        C.abbruch("S5: no measures computed (features / caches missing?).")
     for name, kopf, zeilen in (
             ("ddu_seeds_natural.csv",
              ["arch", "seed", "fit_menge", "kovarianz", "ebene", "signal",
@@ -472,7 +472,7 @@ def signale(daten, eicu):
             if verletzt or fehlend:
                 C.abbruch(f"{name}: superset watchdog -- {len(verletzt)} "
                           f"differing / {len(fehlend)} missing old rows. "
-                          "Frozen signals would be changed.")
+                          "Frozen measures would be changed.")
             C.log(f"[S5] {name}: {len(alte)} old rows contained bit-identically "
                   "(superset ok), file is extended.")
         with open(ziel, "w", newline="", encoding="utf-8") as f:
@@ -486,7 +486,7 @@ def signale(daten, eicu):
                           "fit_mengen": {k: int(len(v))
                                          for k, v in fit_mengen.items()},
                           "bal_seed": C.BAL_SEED,
-                          "hinweis": "Monte Carlo signals: mc_dropout.py (manifest_mc_dropout.json)"},
+                          "hinweis": "Monte Carlo measures: mc_dropout.py (manifest_mc_dropout.json)"},
                          skript="uncertainty/signals.py")
     kernreport(zeilen_ddu, fkt)
 
@@ -514,7 +514,7 @@ def kernreport(zeilen_ddu, fkt):
           and z[6] == "transfer" and z[7] == "0.1288"
           and (z[5] == "softmax_entropie" or (z[2] == "voll_natuerlich"
                                               and z[3] == "klassenspezifisch")))
-    print("   (Monte Carlo signals: mc_dropout.py)")
+    print("   (Monte Carlo measures: mc_dropout.py)")
     print("=" * 78)
 
 
@@ -529,7 +529,7 @@ def main_signals(argv=None):
 
 
 def main(argv=None):
-    ap = argparse.ArgumentParser(description="Prediction caches (S4) and level-1 / level-2 signals (S5).")
+    ap = argparse.ArgumentParser(description="Prediction caches (S4) and level-1 / level-2 measures (S5).")
     ap.add_argument("--caches", action="store_true")
     ap.add_argument("--signals", action="store_true")
     a = ap.parse_args(argv)

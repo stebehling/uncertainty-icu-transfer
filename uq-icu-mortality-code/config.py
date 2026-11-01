@@ -60,7 +60,7 @@ COVERAGE = 0.8                     # risk at 80 % coverage
 N_TRIALS = 30                      # Optuna trials per family
 
 # model families reported in the manuscript (the sigmaReparam transformer is not part of the package).
-# The Monte Carlo dropout signals come from these same models (dropout sampled at prediction time);
+# The Monte Carlo dropout measures come from these same models (dropout sampled at prediction time);
 # no separately trained Monte Carlo family exists.
 BASE_FAMILIES = ["GRU_det", "LSTM_det", "T1_det"]
 CONSTRAINED_FAMILIES = []          # the constrained variants (SN, SN/res) are not part of the short version
@@ -73,7 +73,7 @@ ARCH_OF = {f: f.split("_")[0] for f in ALL_FAMILIES}               # GRU | LSTM 
 GLOSSARY = {
     "familie": "model family", "arch": "architecture", "seed": "training seed", "domaene": "cohort (in_domain | transfer)",
     "ebene1_ood": "level 1, cohort separation", "ebene2_fehler": "level 2, error detection", "ebene3": "level 3, selective prediction",
-    "schwelle": "classification threshold", "wert": "value", "signal": "uncertainty signal",
+    "schwelle": "classification threshold", "wert": "value", "signal": "uncertainty measure",
     "softmax_entropie": "predictive entropy", "dichte": "representation density (class-conditional Gaussian)",
     "mc_epistemisch": "logit variance across the Monte Carlo dropout passes of the trained model", "mi_epistemisch": "mutual information",
     "mi_gesamt": "total predictive uncertainty of the Monte Carlo / ensemble mean", "mi_aleatorisch": "aleatoric part",

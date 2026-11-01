@@ -17,7 +17,7 @@ Method:   every trained deterministic model (GRU, LSTM, Transformer; seeds 42-51
           Logit variance = variance of the 30 logits per patient (ddof 0). Errors = the deterministic
           prediction of the SAME model at the threshold versus the outcome (own-model pairing).
 Reads:    config.MODELS/modell_ihm_<family>_seed<n>.pt            (the trained deterministic models)
-          config.SIGNALS/scores_<family>_seed<n>.npz             (p_<dom>, y_<dom> and the stage-S5 signals)
+          config.SIGNALS/scores_<family>_seed<n>.npz             (p_<dom>, y_<dom> and the stage-S5 measures)
           config.CACHES/p_ihm_<family>_det_seed<n>_<dom>.npz     (A4: cache and scores carry the same p and y)
           data via common.lade_natural / common.lade_eicu
 Writes:   config.SIGNALS/mc_mi_<family>_seed<n>.npz     (patient-level, stays inside RUNS: mi_ges / mi_alea /
@@ -236,7 +236,7 @@ def main(argv=None):
                                    "rnn": None if rnn is None else {"type": type(rnn).__name__,
                                                                      "dropout": float(rnn.dropout),
                                                                      "num_layers": int(rnn.num_layers)}}
-            # the passes and the signals
+            # the passes and the measures
             S = {}
             for dom in DOMS:
                 torch.manual_seed(C.MC_ZIEHUNGS_SEED)       # convention of the reported run: seed right before the passes
