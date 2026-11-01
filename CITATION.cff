@@ -6,8 +6,6 @@ authors:
   - family-names: Behling
     given-names: Stefan
 version: 1.1.0
-date-released: 2026-10-26
+date-released: 2026-11-01
 license: MIT
 repository-code: "https://github.com/stebehling/uncertainty-icu-transfer"
-# Placeholder: replace with the Zenodo DOI of this version once it is archived.
-doi: 10.5281/zenodo.XXXXXXX

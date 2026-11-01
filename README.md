@@ -6,3 +6,7 @@ included.
 
 Installation, the one-command pipeline and where each number of the article is found:
 [uq-icu-mortality-code/README.md](uq-icu-mortality-code/README.md).
+
+## Licence
+
+MIT License. Copyright (c) 2026 Stefan Behling. See [LICENSE](LICENSE).
