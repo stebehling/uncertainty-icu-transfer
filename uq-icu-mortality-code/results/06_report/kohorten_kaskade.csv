@@ -1,0 +1,17 @@
+kohorte,schritt,n_stays,n_patienten,entfernt,kommentar
+MIMIC-IV,ICU stays in MIMIC-IV v3.1,94458,65366.0,,icustays.csv.gz
+MIMIC-IV,Admissions with more than one ICU stay removed,77547,60757.0,16911,exactly one ICU stay per hospital admission (raw table)
+MIMIC-IV,Age below 18 years removed,77547,60757.0,0,"anchor_age; MIMIC-IV contains adults only, so the filter removes no stays"
+MIMIC-IV,ICU stay shorter than 48 h removed,36648,31459.0,40899,los
+MIMIC-IV,Without complete 48-hour feature window or label removed,36648,31459.0,0,intersection with the dataset
+MIMIC-IV,Training set,29350,25168.0,,"patient-level split, 20 % of patients held out"
+MIMIC-IV,  of which: model training,23472,20134.0,,frozen split (data/split.py); 20 % validation for hyperparameters and temperature
+MIMIC-IV,  of which: validation,5878,5034.0,,frozen split (data/split.py)
+MIMIC-IV,Internal test set,7298,6291.0,,
+eICU-CRD,ICU stays in eICU-CRD v2.0,200859,200859.0,,patient.csv.gz
+eICU-CRD,Without a recorded discharge status removed,199108,199108.0,1751,"valid = {alive, expired}"
+eICU-CRD,Age below 18 years removed,198490,198490.0,618,'> 89' counted as 90; empty entries drop out
+eICU-CRD,ICU stay shorter than 48 h removed,76953,76953.0,121537,unitdischargeoffset
+eICU-CRD,Admissions with more than one ICU stay removed,66934,66934.0,10019,"exactly one ICU stay per hospital admission (after the status, age and length-of-stay filters)"
+eICU-CRD,Without usable measurements removed,66934,,0,external transfer cohort
+eICU-CRD,Of these: admission had another ICU stay in the raw data (would be excluded under the MIMIC-IV rule),10378,,,"definition difference, see Limitations"

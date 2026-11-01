@@ -1,0 +1,16 @@
+{
+ "familie": "T1_det",
+ "val_bce": 0.281741,
+ "n_trials": 30,
+ "hp": {
+  "num_layers": 4,
+  "learning_rate": 6.599960088636591e-05,
+  "num_epochs": 13,
+  "batch_size": 128,
+  "dropout": 0.20611722777659033,
+  "d_model": 64,
+  "nhead": 8,
+  "dim_feedforward": 512,
+  "input_size": 25
+ }
+}

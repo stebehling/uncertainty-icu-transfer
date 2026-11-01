@@ -1,0 +1,38 @@
+figure,element,item,value,unit,note
+Figure 5 and SF8,ranking bar,decile 1 (highest entropy first),0.6386,mean predictive entropy,"mean over GRU, LSTM, Transformer (ten seeds each)"
+Figure 5 and SF8,ranking bar,decile 2 (highest entropy first),0.4586,mean predictive entropy,"mean over GRU, LSTM, Transformer (ten seeds each)"
+Figure 5 and SF8,ranking bar,decile 3 (highest entropy first),0.3075,mean predictive entropy,"mean over GRU, LSTM, Transformer (ten seeds each)"
+Figure 5 and SF8,ranking bar,decile 4 (highest entropy first),0.2069,mean predictive entropy,"mean over GRU, LSTM, Transformer (ten seeds each)"
+Figure 5 and SF8,ranking bar,decile 5 (highest entropy first),0.1429,mean predictive entropy,"mean over GRU, LSTM, Transformer (ten seeds each)"
+Figure 5 and SF8,ranking bar,decile 6 (highest entropy first),0.1015,mean predictive entropy,"mean over GRU, LSTM, Transformer (ten seeds each)"
+Figure 5 and SF8,ranking bar,decile 7 (highest entropy first),0.0732,mean predictive entropy,"mean over GRU, LSTM, Transformer (ten seeds each)"
+Figure 5 and SF8,ranking bar,decile 8 (highest entropy first),0.0536,mean predictive entropy,"mean over GRU, LSTM, Transformer (ten seeds each)"
+Figure 5 and SF8,ranking bar,decile 9 (highest entropy first),0.0396,mean predictive entropy,"mean over GRU, LSTM, Transformer (ten seeds each)"
+Figure 5 and SF8,ranking bar,decile 10 (highest entropy first),0.029,mean predictive entropy,"mean over GRU, LSTM, Transformer (ten seeds each)"
+Figure 5 and SF8,ranking bar,decile 1 (highest entropy first),34.54,"share of all misclassifications, %","unrounded; the figure shows the shares rounded by largest remainder (35, 36, 10, 5, 4, 3, 2, 2, 2, 1 %)"
+Figure 5 and SF8,ranking bar,decile 2 (highest entropy first),35.92,"share of all misclassifications, %","unrounded; the figure shows the shares rounded by largest remainder (35, 36, 10, 5, 4, 3, 2, 2, 2, 1 %)"
+Figure 5 and SF8,ranking bar,decile 3 (highest entropy first),9.65,"share of all misclassifications, %","unrounded; the figure shows the shares rounded by largest remainder (35, 36, 10, 5, 4, 3, 2, 2, 2, 1 %)"
+Figure 5 and SF8,ranking bar,decile 4 (highest entropy first),4.97,"share of all misclassifications, %","unrounded; the figure shows the shares rounded by largest remainder (35, 36, 10, 5, 4, 3, 2, 2, 2, 1 %)"
+Figure 5 and SF8,ranking bar,decile 5 (highest entropy first),3.88,"share of all misclassifications, %","unrounded; the figure shows the shares rounded by largest remainder (35, 36, 10, 5, 4, 3, 2, 2, 2, 1 %)"
+Figure 5 and SF8,ranking bar,decile 6 (highest entropy first),3.06,"share of all misclassifications, %","unrounded; the figure shows the shares rounded by largest remainder (35, 36, 10, 5, 4, 3, 2, 2, 2, 1 %)"
+Figure 5 and SF8,ranking bar,decile 7 (highest entropy first),2.52,"share of all misclassifications, %","unrounded; the figure shows the shares rounded by largest remainder (35, 36, 10, 5, 4, 3, 2, 2, 2, 1 %)"
+Figure 5 and SF8,ranking bar,decile 8 (highest entropy first),2.11,"share of all misclassifications, %","unrounded; the figure shows the shares rounded by largest remainder (35, 36, 10, 5, 4, 3, 2, 2, 2, 1 %)"
+Figure 5 and SF8,ranking bar,decile 9 (highest entropy first),1.82,"share of all misclassifications, %","unrounded; the figure shows the shares rounded by largest remainder (35, 36, 10, 5, 4, 3, 2, 2, 2, 1 %)"
+Figure 5 and SF8,ranking bar,decile 10 (highest entropy first),1.52,"share of all misclassifications, %","unrounded; the figure shows the shares rounded by largest remainder (35, 36, 10, 5, 4, 3, 2, 2, 2, 1 %)"
+Figure 5,text,external cohort: misclassified per 100 patients,19,patients of 100,about 19 of 100
+Figure 5,text,deferral of the 20 % most uncertain: misclassified among the deferred,13,patients of 19 misclassified,about 13 of 19
+Figure 5,text,80 % remaining: misclassified among the remaining,6,patients of 19 misclassified,about 6 of 19
+Figure 5,text,error rate among the remaining 80 %,6-8,%,compared with 17-20 % across all patients
+SF8,text,external cohort per 350 patients: misclassified,66,patients of 350,"about 48 false alarms, about 18 missed deaths"
+SF8,text,deferred 20 %: misclassified among the deferred,47,patients of 66 misclassified,"46 false alarms, 1 missed death"
+SF8,text,remaining 80 %: misclassified among the remaining,19,patients of 66 misclassified,"17 missed deaths, 2 false alarms"
+SF8,text,share of all misclassifications among the deferred 20 %,71,%,unrounded 70.5 %
+Figure 5 and SF8,per family,GRU: false alarms among the reviewed errors,96.7,%,
+Figure 5 and SF8,per family,LSTM: false alarms among the reviewed errors,98.6,%,
+Figure 5 and SF8,per family,Transformer: false alarms among the reviewed errors,98.7,%,
+Figure 5 and SF8,per family,GRU: missed deaths among the remaining errors,96.5,%,
+Figure 5 and SF8,per family,LSTM: missed deaths among the remaining errors,90.0,%,
+Figure 5 and SF8,per family,Transformer: missed deaths among the remaining errors,77.5,%,
+Figure 5 and SF8,per family,GRU: error rate all / kept 80 %,17.5 / 6.3,%,
+Figure 5 and SF8,per family,LSTM: error rate all / kept 80 %,18.9 / 6.7,%,
+Figure 5 and SF8,per family,Transformer: error rate all / kept 80 %,20.1 / 8.0,%,

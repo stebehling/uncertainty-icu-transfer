@@ -1,0 +1,24 @@
+# Outputs of run_pipeline.py. They are written next to uq-icu-mortality-code/
+# (config.ROOT = this folder) and are patient-level or derived from PhysioNet
+# data, which must not be redistributed.
+rerun_natural/
+physionet/
+dataset.npz
+eicu_dataset_harmonized.npz
+eicu_dataset_harmonized.manifest.json
+stay_subject_map.csv
+*.npz
+*.pt
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors, OS, tools
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db

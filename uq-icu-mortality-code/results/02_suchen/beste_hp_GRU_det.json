@@ -1,0 +1,14 @@
+{
+ "familie": "GRU_det",
+ "val_bce": 0.267668,
+ "n_trials": 30,
+ "hp": {
+  "num_layers": 2,
+  "learning_rate": 0.00028347161241418315,
+  "num_epochs": 28,
+  "batch_size": 64,
+  "dropout": 0.4276763373088124,
+  "hidden_size": 93,
+  "input_size": 25
+ }
+}

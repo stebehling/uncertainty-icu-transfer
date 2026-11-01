@@ -1,0 +1,14 @@
+{
+ "familie": "LSTM_det",
+ "val_bce": 0.271217,
+ "n_trials": 30,
+ "hp": {
+  "num_layers": 3,
+  "learning_rate": 5.455746115888257e-05,
+  "num_epochs": 40,
+  "batch_size": 64,
+  "dropout": 0.42819031574801947,
+  "hidden_size": 255,
+  "input_size": 25
+ }
+}

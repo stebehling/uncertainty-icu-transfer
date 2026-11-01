@@ -1,0 +1,253 @@
+figure,file_stem,panel,row,col,panel_title,xlabel,ylabel,element,series,index,x,y,x_low,x_high,y_low,y_high,width,height,text
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,errorbar,,0,0.516495,0.0,0.5140398707525632,0.5189501292474369,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,errorbar,,0,0.472824,1.0,0.46708840649976796,0.4785595935002321,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,errorbar,,0,0.47402,2.0,0.46714,0.48211,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,errorbar,,0,0.47489,3.0,0.47395,0.47653,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,errorbar,,0,0.47488,4.0,0.47384,0.47667,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,errorbar,,0,0.476549,5.0,0.47391433270156474,0.47918366729843526,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,errorbar,,0,0.46955,6.0,0.4656592562533213,0.47344074374667877,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,errorbar,,0,0.469711,7.0,0.4658799432139729,0.47354205678602707,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,errorbar,,0,0.474911,8.0,0.47055697485229087,0.4792650251477092,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,line,,0,0.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,line,,1,1.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,line,,0,0.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,line,,1,1.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,line,,0,0.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,line,,1,1.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,line,,0,0.472824,1.0,,,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,line,,0,0.5,0.0,,,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,line,,1,0.5,1.0,,,,,,,
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,ytick,,0,,0,,,,,,,Representation: negative log-density
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,ytick,,1,,1,,,,,,,MC dropout: −1 × logit variance (epistemic)
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,ytick,,2,,2,,,,,,,Deep ensemble: mutual information (MI)
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,ytick,,3,,3,,,,,,,Deep ensemble: aleatoric part ($U_{\mathrm{alea}}$)
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,ytick,,4,,4,,,,,,,Deep ensemble: predictive entropy ($U_{\mathrm{total}}$)
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,ytick,,5,,5,,,,,,,MC dropout: mutual information (MI)
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,ytick,,6,,6,,,,,,,MC dropout: aleatoric part ($U_{\mathrm{alea}}$)
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,ytick,,7,,7,,,,,,,MC dropout: predictive entropy ($U_{\mathrm{total}}$)
+Figure_4_levels,figure_3_levels,0,0,0,"Cohort separation
+AUROC ↑",,GRU,ytick,,8,,8,,,,,,,Single model: predictive entropy
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,errorbar,,0,0.788739,0.0,0.7844866840543435,0.7929913159456564,,,,,
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,errorbar,,0,0.673931,1.0,0.6606023765023569,0.687259623497643,,,,,
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,errorbar,,0,0.8,2.0,0.79367,0.80905,,,,,
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,errorbar,,0,0.85825,3.0,0.85589,0.85959,,,,,
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,errorbar,,0,0.85829,4.0,0.85591,0.85961,,,,,
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,errorbar,,0,0.810198,5.0,0.8061286000403086,0.8142673999596913,,,,,
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,errorbar,,0,0.857513,6.0,0.851334986028378,0.863691013971622,,,,,
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,errorbar,,0,0.85714,7.0,0.8509725924846886,0.8633074075153114,,,,,
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,errorbar,,0,0.855892,8.0,0.8489606704600852,0.8628233295399148,,,,,
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,line,,0,0.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,line,,1,1.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,line,,0,0.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,line,,1,1.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,line,,0,0.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,line,,1,1.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,line,,0,0.673931,1.0,,,,,,,
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,line,,0,0.5,0.0,,,,,,,
+Figure_4_levels,figure_3_levels,1,0,1,"Error detection
+AUROC ↑",,,line,,1,0.5,1.0,,,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,errorbar,,0,0.047825,0.0,0.044982093518748816,0.05066790648125118,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,errorbar,,0,0.10859,1.0,0.10409378097536164,0.11308621902463838,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,errorbar,,0,0.04889,2.0,0.04601,0.0506,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,errorbar,,0,0.03711,3.0,0.03698,0.03735,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,errorbar,,0,0.03708,4.0,0.03694,0.03733,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,errorbar,,0,0.046554,5.0,0.04498844759196506,0.048119552408034935,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,errorbar,,0,0.036864,6.0,0.036418562733862556,0.037309437266137446,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,errorbar,,0,0.036928,7.0,0.03648186641290305,0.03737413358709696,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,errorbar,,0,0.037774,8.0,0.03714573925592633,0.03840226074407367,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,line,,0,0.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,line,,1,1.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,line,,0,0.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,line,,1,1.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,line,,0,0.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,line,,1,1.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,line,,0,0.10859,1.0,,,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,line,,0,0.0,0.0,,,,,,,
+Figure_4_levels,figure_3_levels,2,0,2,"Selective prediction
+E-AURC ↓",,,line,,1,0.0,1.0,,,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,errorbar,,0,0.531469,0.0,0.5243534500663122,0.5385845499336878,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,errorbar,,0,0.467044,1.0,0.4614109344770592,0.4726770655229408,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,errorbar,,0,0.48804,2.0,0.48527,0.49554,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,errorbar,,0,0.46616,3.0,0.46463,0.46744,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,errorbar,,0,0.46672,4.0,0.46518,0.46809,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,errorbar,,0,0.476386,5.0,0.47139144776903635,0.4813805522309636,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,errorbar,,0,0.462011,6.0,0.45801935155940754,0.46600264844059247,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,errorbar,,0,0.46242,7.0,0.4584437511353639,0.4663962488646361,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,errorbar,,0,0.465773,8.0,0.46097879186938695,0.47056720813061303,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,line,,0,0.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,line,,1,1.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,line,,0,0.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,line,,1,1.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,line,,0,0.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,line,,1,1.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,line,,0,0.467044,1.0,,,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,line,,0,0.5,0.0,,,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,line,,1,0.5,1.0,,,,,,,
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,ytick,,0,,0,,,,,,,Representation: negative log-density
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,ytick,,1,,1,,,,,,,MC dropout: −1 × logit variance (epistemic)
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,ytick,,2,,2,,,,,,,Deep ensemble: mutual information (MI)
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,ytick,,3,,3,,,,,,,Deep ensemble: aleatoric part ($U_{\mathrm{alea}}$)
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,ytick,,4,,4,,,,,,,Deep ensemble: predictive entropy ($U_{\mathrm{total}}$)
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,ytick,,5,,5,,,,,,,MC dropout: mutual information (MI)
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,ytick,,6,,6,,,,,,,MC dropout: aleatoric part ($U_{\mathrm{alea}}$)
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,ytick,,7,,7,,,,,,,MC dropout: predictive entropy ($U_{\mathrm{total}}$)
+Figure_4_levels,figure_3_levels,3,1,0,,,LSTM,ytick,,8,,8,,,,,,,Single model: predictive entropy
+Figure_4_levels,figure_3_levels,4,1,1,,,,errorbar,,0,0.728073,0.0,0.7118150548289017,0.7443309451710982,,,,,
+Figure_4_levels,figure_3_levels,4,1,1,,,,errorbar,,0,0.685665,1.0,0.6671841849043323,0.7041458150956676,,,,,
+Figure_4_levels,figure_3_levels,4,1,1,,,,errorbar,,0,0.78016,2.0,0.76699,0.79054,,,,,
+Figure_4_levels,figure_3_levels,4,1,1,,,,errorbar,,0,0.86084,3.0,0.85921,0.86193,,,,,
+Figure_4_levels,figure_3_levels,4,1,1,,,,errorbar,,0,0.86093,4.0,0.85925,0.86199,,,,,
+Figure_4_levels,figure_3_levels,4,1,1,,,,errorbar,,0,0.790733,5.0,0.7801366787387455,0.8013293212612546,,,,,
+Figure_4_levels,figure_3_levels,4,1,1,,,,errorbar,,0,0.860924,6.0,0.8558589568615239,0.8659890431384761,,,,,
+Figure_4_levels,figure_3_levels,4,1,1,,,,errorbar,,0,0.860655,7.0,0.8556306297564749,0.865679370243525,,,,,
+Figure_4_levels,figure_3_levels,4,1,1,,,,errorbar,,0,0.858295,8.0,0.8530128145359691,0.863577185464031,,,,,
+Figure_4_levels,figure_3_levels,4,1,1,,,,line,,0,0.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,4,1,1,,,,line,,1,1.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,4,1,1,,,,line,,0,0.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,4,1,1,,,,line,,1,1.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,4,1,1,,,,line,,0,0.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,4,1,1,,,,line,,1,1.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,4,1,1,,,,line,,0,0.685665,1.0,,,,,,,
+Figure_4_levels,figure_3_levels,4,1,1,,,,line,,0,0.5,0.0,,,,,,,
+Figure_4_levels,figure_3_levels,4,1,1,,,,line,,1,0.5,1.0,,,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,errorbar,,0,0.072333,0.0,0.06450920515295831,0.08015679484704168,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,errorbar,,0,0.11433,1.0,0.10715011601240243,0.12150988398759757,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,errorbar,,0,0.05934,2.0,0.05591,0.06345,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,errorbar,,0,0.04104,3.0,0.04071,0.04137,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,errorbar,,0,0.04097,4.0,0.04063,0.04133,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,errorbar,,0,0.055957,5.0,0.050683189540345994,0.061230810459654006,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,errorbar,,0,0.040461,6.0,0.03935820727096884,0.04156379272903116,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,errorbar,,0,0.040464,7.0,0.03936115700853476,0.04156684299146524,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,errorbar,,0,0.042151,8.0,0.04085944201709563,0.04344255798290437,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,line,,0,0.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,line,,1,1.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,line,,0,0.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,line,,1,1.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,line,,0,0.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,line,,1,1.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,line,,0,0.11433,1.0,,,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,line,,0,0.0,0.0,,,,,,,
+Figure_4_levels,figure_3_levels,5,1,2,,,,line,,1,0.0,1.0,,,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,errorbar,,0,0.511923,0.0,0.5034610221979755,0.5203849778020245,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,errorbar,,0,0.466611,1.0,0.4632988668057453,0.4699231331942547,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,errorbar,,0,0.45697,2.0,0.45519,0.45992,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,errorbar,,0,0.46029,3.0,0.45943,0.46137,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,errorbar,,0,0.45966,4.0,0.45888,0.46087,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,errorbar,,0,0.463857,5.0,0.46021253797760553,0.4675014620223945,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,errorbar,,0,0.460372,6.0,0.45699506842318416,0.46374893157681585,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,errorbar,,0,0.460388,7.0,0.45700440317817626,0.4637715968218238,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,errorbar,,0,0.461734,8.0,0.4582330744747161,0.46523492552528384,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,line,,0,0.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,line,,1,1.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,line,,0,0.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,line,,1,1.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,line,,0,0.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,line,,1,1.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,line,,0,0.466611,1.0,,,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,line,,0,0.5,0.0,,,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,line,,1,0.5,1.0,,,,,,,
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,ytick,,0,,0,,,,,,,Representation: negative log-density
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,ytick,,1,,1,,,,,,,MC dropout: −1 × logit variance (epistemic)
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,ytick,,2,,2,,,,,,,Deep ensemble: mutual information (MI)
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,ytick,,3,,3,,,,,,,Deep ensemble: aleatoric part ($U_{\mathrm{alea}}$)
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,ytick,,4,,4,,,,,,,Deep ensemble: predictive entropy ($U_{\mathrm{total}}$)
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,ytick,,5,,5,,,,,,,MC dropout: mutual information (MI)
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,ytick,,6,,6,,,,,,,MC dropout: aleatoric part ($U_{\mathrm{alea}}$)
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,ytick,,7,,7,,,,,,,MC dropout: predictive entropy ($U_{\mathrm{total}}$)
+Figure_4_levels,figure_3_levels,6,2,0,,,Transformer,ytick,,8,,8,,,,,,,Single model: predictive entropy
+Figure_4_levels,figure_3_levels,7,2,1,,,,errorbar,,0,0.7526,0.0,0.7395804022933272,0.7656195977066729,,,,,
+Figure_4_levels,figure_3_levels,7,2,1,,,,errorbar,,0,0.818878,1.0,0.8068781868620309,0.830877813137969,,,,,
+Figure_4_levels,figure_3_levels,7,2,1,,,,errorbar,,0,0.85499,2.0,0.85189,0.8558,,,,,
+Figure_4_levels,figure_3_levels,7,2,1,,,,errorbar,,0,0.87362,3.0,0.87238,0.87625,,,,,
+Figure_4_levels,figure_3_levels,7,2,1,,,,errorbar,,0,0.87358,4.0,0.87234,0.87624,,,,,
+Figure_4_levels,figure_3_levels,7,2,1,,,,errorbar,,0,0.835672,5.0,0.8281298869848764,0.8432141130151235,,,,,
+Figure_4_levels,figure_3_levels,7,2,1,,,,errorbar,,0,0.869325,6.0,0.8597877349499838,0.8788622650500162,,,,,
+Figure_4_levels,figure_3_levels,7,2,1,,,,errorbar,,0,0.869303,7.0,0.8597622675919532,0.8788437324080469,,,,,
+Figure_4_levels,figure_3_levels,7,2,1,,,,errorbar,,0,0.870395,8.0,0.8606438131214534,0.8801461868785466,,,,,
+Figure_4_levels,figure_3_levels,7,2,1,,,,line,,0,0.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,7,2,1,,,,line,,1,1.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,7,2,1,,,,line,,0,0.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,7,2,1,,,,line,,1,1.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,7,2,1,,,,line,,0,0.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,7,2,1,,,,line,,1,1.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,7,2,1,,,,line,,0,0.818878,1.0,,,,,,,
+Figure_4_levels,figure_3_levels,7,2,1,,,,line,,0,0.5,0.0,,,,,,,
+Figure_4_levels,figure_3_levels,7,2,1,,,,line,,1,0.5,1.0,,,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,errorbar,,0,0.06534,0.0,0.05836005131968436,0.07231994868031563,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,errorbar,,0,0.052603,1.0,0.05036054759015135,0.054845452409848644,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,errorbar,,0,0.04224,2.0,0.04168,0.0431,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,errorbar,,0,0.03692,3.0,0.03677,0.03704,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,errorbar,,0,0.03692,4.0,0.03677,0.03703,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,errorbar,,0,0.047348,5.0,0.04561562432826595,0.04908037567173405,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,errorbar,,0,0.037659,6.0,0.03711184894962725,0.03820615105037275,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,errorbar,,0,0.037675,7.0,0.03713064280835099,0.03821935719164901,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,errorbar,,0,0.037333,8.0,0.0368610773089202,0.037804922691079795,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,line,,0,0.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,line,,1,1.0,1.5,,,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,line,,0,0.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,line,,1,1.0,4.5,,,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,line,,0,0.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,line,,1,1.0,7.5,,,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,line,,0,0.052603,1.0,,,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,line,,0,0.0,0.0,,,,,,,
+Figure_4_levels,figure_3_levels,8,2,2,,,,line,,1,0.0,1.0,,,,,,,

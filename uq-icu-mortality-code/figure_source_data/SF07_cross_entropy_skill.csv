@@ -1,0 +1,73 @@
+figure,file_stem,panel,row,col,panel_title,xlabel,ylabel,element,series,index,x,y,x_low,x_high,y_low,y_high,width,height,text
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,0,0.0,0.2836444,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,1,1.0,0.3084253,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,0,0.0,0.29266040000000004,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,1,1.0,0.3086811,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,0,0.0,0.29197460000000003,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,1,1.0,0.3111524,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,0,0.0,0.2828707,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,1,1.0,0.3172281,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,0,0.0,0.2832185,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,1,1.0,0.30541450000000003,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,0,0.0,0.2835554,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,1,1.0,0.30742499999999995,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,0,0.0,0.2969072,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,1,1.0,0.31634719999999994,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,0,1.0,0.3084253,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,1,1.09,0.30921158479999994,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,0,1.0,0.3086811,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,1,1.09,0.31099816959999993,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,0,1.0,0.3111524,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,1,1.09,0.3127847543999999,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,0,1.0,0.3172281,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),line,,1,1.09,0.31813378479999993,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),text_data,,0,1.11,0.30541450000000003,,,,,,,LSTM+SN
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),text_data,,0,1.11,0.30742499999999995,,,,,,,LSTM+SN/res
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),text_data,,0,1.11,0.30921158479999994,,,,,,,GRU
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),text_data,,0,1.11,0.31099816959999993,,,,,,,GRU+SN
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),text_data,,0,1.11,0.3127847543999999,,,,,,,GRU+SN/res
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),text_data,,0,1.11,0.31634719999999994,,,,,,,Transformer
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),text_data,,0,1.11,0.31813378479999993,,,,,,,LSTM
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),xtick,,0,0,,,,,,,,"MIMIC-IV
+internal test"
+SF07_cross_entropy_skill,figure_ce_skill,0,0,0,Cross-entropy as measured,,cross-entropy (nats),xtick,,1,1,,,,,,,,"eICU-CRD
+external test"
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,0,0.0,0.292273,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,1,1.0,0.106396,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,0,0.0,0.26977700000000004,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,1,1.0,0.105654,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,0,0.0,0.271489,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,1,1.0,0.098492,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,0,0.0,0.29420499999999994,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,1,1.0,0.080889,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,0,0.0,0.29333699999999996,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,1,1.0,0.115117,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,0,0.0,0.29249499999999995,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,1,1.0,0.109293,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,0,0.0,0.25918199999999997,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,1,1.0,0.083443,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,0,1.0,0.083443,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,1,1.09,0.091981432,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,0,1.0,0.098492,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,1,1.09,0.103073864,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,0,1.0,0.105654,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,1,1.09,0.114166296,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,0,1.0,0.106396,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,1,1.09,0.12525872799999999,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,0,1.0,0.109293,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,1,1.09,0.13635115999999997,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,0,1.0,0.115117,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,1,1.09,0.14744359199999996,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,0,0.0,0.0,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),line,,1,1.0,0.0,,,,,,,
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),text_data,,0,1.11,0.080889,,,,,,,LSTM
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),text_data,,0,1.11,0.091981432,,,,,,,Transformer
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),text_data,,0,1.11,0.103073864,,,,,,,GRU+SN/res
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),text_data,,0,1.11,0.114166296,,,,,,,GRU+SN
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),text_data,,0,1.11,0.12525872799999999,,,,,,,GRU
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),text_data,,0,1.11,0.13635115999999997,,,,,,,LSTM+SN/res
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),text_data,,0,1.11,0.14744359199999996,,,,,,,LSTM+SN
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),xtick,,0,0,,,,,,,,"MIMIC-IV
+internal test"
+SF07_cross_entropy_skill,figure_ce_skill,1,0,1,Cross-entropy as skill over the prevalence baseline,,skill = 1 − CE / H(prevalence),xtick,,1,1,,,,,,,,"eICU-CRD
+external test"
